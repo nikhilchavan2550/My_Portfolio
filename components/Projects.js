@@ -41,7 +41,7 @@ export default function Projects() {
     {
       title: "SkillCrafter",
       description: "A skill-sharing platform enabling profile creation, skill exchange, and real-time chat via Socket.io.",
-      image: "/images/SkillCrafter.jpeg",
+      image: "/Images/SkillCrafter.jpeg",
       // videoPath: "/images/Skill_Crafter.mp4", // Local video removed in favor of YouTube
       youtubeId: "nUPFp16Zx04", // Linked to the correct YouTube video
       videoId: "skillCrafter",
@@ -56,7 +56,7 @@ export default function Projects() {
     {
       title: "ML Expert",
       description: "An end-to-end machine learning platform with automated data processing, model training, and evaluation.",
-      image: "/images/MLForge.jpeg",
+      image: "/Images/MLForge.jpeg",
       // videoPath: "/images/Ml_Expert.mp4", // Local video removed in favor of YouTube
       youtubeId: "a8X0Z6L3nvQ", // Linked to the correct YouTube video
       videoId: "mlExpert",
@@ -71,7 +71,7 @@ export default function Projects() {
     {
       title: "HealthConnect",
       description: "A healthcare platform for real-time doctor availability, appointment booking, and secure messaging.",
-      image: "/images/Healthconnect.jpeg",
+      image: "/Images/Healthconnect.jpeg",
       technologies: ["React", "Node.js", "Express.js", "MongoDB"],
       points: [
         "Developed a healthcare platform for real-time doctor availability and appointment booking",
