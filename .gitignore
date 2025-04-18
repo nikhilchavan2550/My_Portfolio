@@ -1,0 +1,52 @@
+# Dependency directories
+node_modules/
+.next/
+
+# Build output
+out/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Videos and large binaries
+*.mp4
+*.avi
+*.mov
+*.webm
+*.mkv
+*.wmv
+*.exe
+*.pkl
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Jupyter notebooks and logs
+*.ipynb
+*.log
+*.dat
+
+# OS generated files
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# Ignore videos in public/images and keep only images for demo
+public/images/*.mp4
+public/images/*.avi
+public/images/*.mov
+public/images/*.webm
+public/images/*.mkv
+public/images/*.wmv
+public/images/*.exe
+public/images/*.zip
+public/images/*.tar.gz
+public/images/*.7z
+public/images/*.rar
+
+# Exclude demo images folder from ignore
+!public/images/Images_for _demo/
