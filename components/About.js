@@ -80,11 +80,11 @@ export default function About() {
             <div className="w-full max-w-md">
               <ImageSlider 
                 images={[
-                  { src: '/images/me_pho.jpeg', alt: 'Profile Photo' },
-                  { src: '/images/building.jpeg', alt: 'Building Project' },
-                  { src: '/images/goodies.jpeg', alt: 'Goodies Project' },
-                  { src: '/images/presentation.jpeg', alt: 'Presentation' },
-                  { src: '/images/imgoff.jpeg', alt: 'Office' }
+                  { src: '/Images/me_pho.jpeg', alt: 'Profile Photo' },
+                  { src: '/Images/building.jpeg', alt: 'Building Project' },
+                  { src: '/Images/goodies.jpeg', alt: 'Goodies Project' },
+                  { src: '/Images/presentation.jpeg', alt: 'Presentation' },
+                  { src: '/Images/imgoff.jpeg', alt: 'Office' }
                 ]} 
               />
             </div>
