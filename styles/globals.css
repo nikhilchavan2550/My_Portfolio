@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-dark text-light;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+.highlight {
+  @apply text-primary font-medium;
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-10 relative after:content-[''] after:absolute after:h-1 after:w-24 after:bg-primary after:left-0 after:-bottom-2 sm:text-4xl;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block;
+}
+
+.btn-primary {
+  @apply bg-primary text-dark hover:bg-primary/80;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-dark;
+}
+
+.card {
+  @apply bg-dark-light p-6 rounded-lg transition-all duration-300 border border-transparent hover:border-primary/30;
+}
+
+.skill-item {
+  @apply bg-dark-light px-4 py-2 rounded-md text-sm flex items-center space-x-2 border border-transparent hover:border-primary/50 transition-all duration-300;
+}
