@@ -129,27 +129,31 @@ export default function Projects() {
               {/* Project Image/Display */}
               <div style={{ direction: 'ltr' }} className="bg-dark rounded-lg overflow-hidden relative group">
                 {showVideo[project.videoId] ? (
-                  <div className="aspect-w-16 aspect-h-9 w-full h-64 overflow-hidden">
+                  <div className="w-full overflow-hidden rounded-lg">
                     {project.youtubeId ? (
                       // YouTube embed
-                      <iframe
-                        src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1`}
-                        title={project.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      ></iframe>
+                      <div className="relative pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
+                        <iframe
+                          src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1`}
+                          title={project.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+                      </div>
                     ) : (
                       // Direct video file
-                      <video 
-                        src={project.videoPath} 
-                        controls 
-                        className="w-full h-full object-cover"
-                        autoPlay
-                      >
-                        Your browser does not support the video tag.
-                      </video>
+                      <div className="relative pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
+                        <video 
+                          src={project.videoPath} 
+                          controls 
+                          className="absolute top-0 left-0 w-full h-full object-cover"
+                          autoPlay
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
                     )}
                     <button 
                       onClick={() => toggleVideo(project.videoId)}
@@ -159,11 +163,17 @@ export default function Projects() {
                     </button>
                   </div>
                 ) : (
-                  <div className="aspect-w-16 aspect-h-9 w-full h-64 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center overflow-hidden">
+                  <div className="w-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center overflow-hidden rounded-lg">
                     {project.image ? (
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                      <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="absolute top-0 left-0 w-full h-full object-contain" 
+                        />
+                      </div>
                     ) : (
-                      <div className="text-6xl text-primary/30 font-bold">{project.title.substring(0, 2)}</div>
+                      <div className="text-6xl text-primary/30 font-bold py-16">{project.title.substring(0, 2)}</div>
                     )}
                     <div className="absolute inset-0 bg-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                       <a 

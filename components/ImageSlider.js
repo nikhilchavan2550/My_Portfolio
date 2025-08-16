@@ -17,7 +17,7 @@ export default function ImageSlider({ images }) {
   };
 
   return (
-    <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ height: '70vw', maxHeight: '500px' }}>
       {/* Main Image Display */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -35,7 +35,7 @@ export default function ImageSlider({ images }) {
             <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
             {/* Subtle gradient overlay for professional look */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>

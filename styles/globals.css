@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .img-responsive {
+    @apply w-full h-auto object-contain;
+  }
+  
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+  
+  .img-contain {
+    @apply w-full h-full object-contain;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
